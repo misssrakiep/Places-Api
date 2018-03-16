@@ -19,6 +19,7 @@ createConnection().then(async connection => {
     // register all application routes
     AppRoutes.forEach(route => {
         app[route.method](route.path, (request: Request, response: Response, next: Function) => {
+            response.redirect('/api/places');
             route.action(request, response)
                 .then(() => next)
                 .catch(err => next(err));

@@ -1,19 +1,11 @@
 {
-  "name": "typeorm-typescript-express-example",
+  "name": "places-of-interest-api",
   "version": "0.0.1",
-  "description": "Example how to use Express and TypeORM with TypeScript.",
   "license": "MIT",
   "readmeFilename": "README.md",
   "author": {
-    "name": "Umed Khudoiberdiev",
-    "email": "pleerock.me@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/typeorm/typescript-express-example.git"
-  },
-  "bugs": {
-    "url": "https://github.com/typeorm/typescript-express-example/issues"
+    "name": "Shameera Rakiep",
+    "email": "shameerarakiep@gmail.com"
   },
   "tags": [
     "orm",
@@ -38,6 +30,6 @@
     "typeorm": "^0.1.0"
   },
   "scripts": {
-    "start": "tsc && node src/index.js"
+    "start": "tsc && node build/index.js"
   }
 }

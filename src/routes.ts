@@ -3,16 +3,12 @@ import {placeGetByIdAction} from "./controller/PlaceGetByIdAction";
 import {reviewSaveAction} from "./controller/ReviewSaveAction";
 import {reviewGetAllAction} from "./controller/ReviewGetAllAction";
 import {placePostAction} from "./controller/PlacePostAction";
-import {redirect} from "./controller/Redirect";
+
 /**
  * All application routes.
  */
 export const AppRoutes = [
-    {
-        path: "/",
-        method: "get",
-        action: redirect
-    },
+
     {
         path: "/api/places",
         method: "get",
