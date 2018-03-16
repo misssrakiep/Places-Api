@@ -1,3 +1,4 @@
+import * as http from 'http';
 import "reflect-metadata";
 import {createConnection} from "typeorm";
 import {Request, Response} from "express";
