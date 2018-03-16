@@ -1,10 +1,11 @@
 {
-  "name": "places-of-interest-api",
+  "name": "typeorm-typescript",
   "version": "0.0.1",
+  "description": "Example how to use Express and TypeORM with TypeScript.",
   "license": "MIT",
   "readmeFilename": "README.md",
   "author": {
-    "name": "Shameera Rakiep",
+    "name": "shameera rakiep",
     "email": "shameerarakiep@gmail.com"
   },
   "tags": [
@@ -30,6 +31,6 @@
     "typeorm": "^0.1.0"
   },
   "scripts": {
-    "start": "tsc && node index.js"
+    "start": "tsc && node src/index.js"
   }
 }
