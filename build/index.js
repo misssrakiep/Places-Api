@@ -62,7 +62,7 @@ typeorm_1.createConnection().then(function (connection) { return __awaiter(_this
         });
         // run app
         app.listen(9090);
-        console.log("Express application is up and running on port 8080");
+        console.log("Express application is up and running on port 9090");
         return [2 /*return*/];
     });
 }); }).catch(function (error) { return console.log("TypeORM connection error: ", error); });

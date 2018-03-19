@@ -10,7 +10,7 @@ export async function reviewSaveAction(request: Request, response: Response) {
     // get a post repository to perform operations with post
     const reviewsRepository = getRepository(Reviews);
     let data = request.body;
-    console.log(data);
+    // console.log(data);
     
     // create a real post object from post json object sent over http
     const newReview = new Reviews();
