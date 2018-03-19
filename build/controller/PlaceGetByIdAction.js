@@ -52,7 +52,7 @@ function placeGetByIdAction(request, response) {
                     return [4 /*yield*/, placeRepository.findOneById(request.params.id)];
                 case 1:
                     place = _a.sent();
-                    return [4 /*yield*/, reviewsRepository.find({ placeID: request.params.id })
+                    return [4 /*yield*/, reviewsRepository.find({ place: request.params.id })
                         // if post was not found return 404 to the client
                     ];
                 case 2:

@@ -14,7 +14,7 @@ export async function placeGetByIdAction(request: Request, response: Response) {
 
     // load a post by a given post id
     const place = await placeRepository.findOneById(request.params.id);
-    const reviews = await reviewsRepository.find({placeID: request.params.id})
+    const reviews = await reviewsRepository.find({place: request.params.id})
     
 
     // if post was not found return 404 to the client

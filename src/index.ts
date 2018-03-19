@@ -20,7 +20,6 @@ createConnection().then(async connection => {
     // register all application routes
     AppRoutes.forEach(route => {
         app[route.method](route.path, (request: Request, response: Response, next: Function) => {
-            response.redirect('/api/places');
             route.action(request, response)
                 .then(() => next)
                 .catch(err => next(err));
@@ -28,8 +27,8 @@ createConnection().then(async connection => {
     });
 
     // run app
-    app.listen(8080);
+    app.listen(9090);
 
-    console.log("Express application is up and running on port 8080");
+    console.log("Express application is up and running on port 9090");
 
 }).catch(error => console.log("TypeORM connection error: ", error));

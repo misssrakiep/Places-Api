@@ -54,7 +54,6 @@ typeorm_1.createConnection().then(function (connection) { return __awaiter(_this
         // register all application routes
         routes_1.AppRoutes.forEach(function (route) {
             app[route.method](route.path, function (request, response, next) {
-                // response.redirect('/api/places');
                 route.action(request, response)
                     .then(function () { return next; })
                     .catch(function (err) { return next(err); });

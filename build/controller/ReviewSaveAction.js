@@ -37,26 +37,32 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var typeorm_1 = require("typeorm");
 var Reviews_1 = require("../entity/Reviews");
+var Places_1 = require("../entity/Places");
 /**
  * Saves given post.
  */
 function reviewSaveAction(request, response) {
     return __awaiter(this, void 0, void 0, function () {
-        var reviewsRepository, data, newReview;
+        var reviewsRepository, placeRepository, data, newReview, place;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     reviewsRepository = typeorm_1.getRepository(Reviews_1.Reviews);
+                    placeRepository = typeorm_1.getRepository(Places_1.Place);
                     data = request.body;
                     newReview = new Reviews_1.Reviews();
+                    return [4 /*yield*/, placeRepository.findOneById(request.params.id)];
+                case 1:
+                    place = _a.sent();
+                    console.log("PLACE ID PARAM", request.params.id);
                     newReview.user_name = data.user_name;
                     newReview.rating = data.rating;
                     newReview.review = data.review;
                     newReview.pictures = data.pictures;
-                    newReview.placeID = request.params.id;
+                    newReview.place = place;
                     // save received post
                     return [4 /*yield*/, reviewsRepository.save(newReview)];
-                case 1:
+                case 2:
                     // save received post
                     _a.sent();
                     // return saved post back
