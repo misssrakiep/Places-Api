@@ -50,19 +50,19 @@ function placePostAction(request, response) {
                     data = request.body;
                     console.log("data", data);
                     newPlace = new Places_1.Place();
-                    // newPlace.placeName = data.placeName;
-                    // newPlace.type = data.type;
-                    // newPlace.website = data.website;
-                    // newPlace.latlng = data.latlng;
-                    // newPlace.review = data.review;
+                    newPlace.placeName = data.placeName;
+                    newPlace.type = data.type;
+                    newPlace.website = data.website;
+                    newPlace.latlng = data.latlng;
+                    newPlace.review = data.review;
                     // save received post
                     return [4 /*yield*/, myPlaceRepository.save(newPlace)];
                 case 1:
-                    // newPlace.placeName = data.placeName;
-                    // newPlace.type = data.type;
-                    // newPlace.website = data.website;
-                    // newPlace.latlng = data.latlng;
-                    // newPlace.review = data.review;
+                    newPlace.placeName = data.placeName;
+                    newPlace.type = data.type;
+                    newPlace.website = data.website;
+                    newPlace.latlng = data.latlng;
+                    newPlace.review = data.review;
                     // save received post
                     _a.sent();
                     // return saved post back
