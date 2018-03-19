@@ -30,7 +30,7 @@ exports.AppRoutes = [
         action: PlaceGetByIdAction_1.placeGetByIdAction
     },
     {
-        path: "/api/reviews",
+        path: "/api/places/:id/postReviews",
         method: "post",
         action: ReviewSaveAction_1.reviewSaveAction
     }

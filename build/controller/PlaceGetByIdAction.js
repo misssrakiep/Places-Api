@@ -37,21 +37,33 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var typeorm_1 = require("typeorm");
 var Places_1 = require("../entity/Places");
+var Reviews_1 = require("../entity/Reviews");
 /**
  * Loads post by a given id.
  */
 function placeGetByIdAction(request, response) {
     return __awaiter(this, void 0, void 0, function () {
-        var placeRepository, place;
+        var placeRepository, reviewsRepository, place, reviews;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     placeRepository = typeorm_1.getRepository(Places_1.Place);
+                    reviewsRepository = typeorm_1.getRepository(Reviews_1.Reviews);
                     return [4 /*yield*/, placeRepository.findOneById(request.params.id)];
                 case 1:
                     place = _a.sent();
+                    return [4 /*yield*/, reviewsRepository.find({ placeID: request.params.id })
+                        // if post was not found return 404 to the client
+                    ];
+                case 2:
+                    reviews = _a.sent();
                     // if post was not found return 404 to the client
                     if (!place) {
+                        response.status(404);
+                        response.end();
+                        return [2 /*return*/];
+                    }
+                    if (!reviews) {
                         response.status(404);
                         response.end();
                         return [2 /*return*/];

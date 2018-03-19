@@ -48,13 +48,12 @@ function reviewSaveAction(request, response) {
                 case 0:
                     reviewsRepository = typeorm_1.getRepository(Reviews_1.Reviews);
                     data = request.body;
-                    console.log(data);
                     newReview = new Reviews_1.Reviews();
                     newReview.user_name = data.user_name;
                     newReview.rating = data.rating;
                     newReview.review = data.review;
                     newReview.pictures = data.pictures;
-                    newReview.place = data.place;
+                    newReview.placeID = request.params.id;
                     // save received post
                     return [4 /*yield*/, reviewsRepository.save(newReview)];
                 case 1:

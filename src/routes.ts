@@ -30,7 +30,7 @@ export const AppRoutes = [
         action: placeGetByIdAction
     },
     {
-        path: "/api/reviews",
+        path: "/api/places/:id/postReviews",
         method: "post",
         action: reviewSaveAction
     }

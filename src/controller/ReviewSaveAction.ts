@@ -19,7 +19,7 @@ export async function reviewSaveAction(request: Request, response: Response) {
     newReview.rating = data.rating;
     newReview.review = data.review;
     newReview.pictures = data.pictures;
-    newReview.place = data.place;
+    newReview.placeID = request.params.id;
     
     // save received post
     await reviewsRepository.save(newReview);
