@@ -7,18 +7,18 @@
   "database": "Places",
   "synchronize": true,
   "entities": [
-    "src/entity/*.js"
+    "build/entity/*.js"
   ],
   "subscribers": [
-    "src/subscriber/*.js"
+    "build/subscriber/*.js"
   ],
   "migrations": [
-    "src/migration/*.js"
+    "build/migration/*.js"
   ],
   "cli": {
-    "entitiesDir": "src/entity",
-    "migrationsDir": "src/migration",
-    "subscribersDir": "src/subscriber"
+    "entitiesDir": "build/entity",
+    "migrationsDir": "build/migration",
+    "subscribersDir": "build/subscriber"
   }
 }
 

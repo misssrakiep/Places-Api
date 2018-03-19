@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {getManager, getRepository} from "typeorm";
+import {getRepository} from "typeorm";
 import {Place} from "../entity/Places";
 
 /**
@@ -8,7 +8,7 @@ import {Place} from "../entity/Places";
 export async function placeGetByIdAction(request: Request, response: Response) {
 
     // get a post repository to perform operations with post
-    const placeRepository = getManager().getRepository(Place);
+    const placeRepository = getRepository(Place);
 
     // load a post by a given post id
     const place = await placeRepository.findOneById(request.params.id);

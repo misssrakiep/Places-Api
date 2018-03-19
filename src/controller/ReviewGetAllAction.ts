@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {getManager, getRepository} from "typeorm";
+import {getRepository} from "typeorm";
 import {Reviews} from "../entity/Reviews";
 
 /**
@@ -8,7 +8,7 @@ import {Reviews} from "../entity/Reviews";
 export async function reviewGetAllAction(request: Request, response: Response) {
 
     // get a post repository to perform operations with post
-    const reviewRepository = getManager().getRepository(Reviews);
+    const reviewRepository = getRepository(Reviews);
 
     // load a post by a given post id
     const reviews = await reviewRepository.find();

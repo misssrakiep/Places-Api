@@ -9,37 +9,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const typeorm_1 = require("typeorm");
-const Places_1 = require("./Places");
-let Reviews = Reviews_1 = class Reviews {
-};
-__decorate([
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
-], Reviews.prototype, "id", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], Reviews.prototype, "user_name", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", Number)
-], Reviews.prototype, "rating", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], Reviews.prototype, "review", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], Reviews.prototype, "pictures", void 0);
-__decorate([
-    typeorm_1.ManyToOne(type => Reviews_1, reviews => reviews.place),
-    __metadata("design:type", Places_1.Place)
-], Reviews.prototype, "place", void 0);
-Reviews = Reviews_1 = __decorate([
-    typeorm_1.Entity()
-], Reviews);
+var typeorm_1 = require("typeorm");
+var Places_1 = require("./Places");
+var Reviews = /** @class */ (function () {
+    function Reviews() {
+    }
+    Reviews_1 = Reviews;
+    __decorate([
+        typeorm_1.PrimaryGeneratedColumn(),
+        __metadata("design:type", Number)
+    ], Reviews.prototype, "id", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Reviews.prototype, "user_name", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", Number)
+    ], Reviews.prototype, "rating", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Reviews.prototype, "review", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Reviews.prototype, "pictures", void 0);
+    __decorate([
+        typeorm_1.ManyToOne(function (type) { return Reviews_1; }, function (reviews) { return reviews.place; }),
+        __metadata("design:type", Places_1.Place)
+    ], Reviews.prototype, "place", void 0);
+    Reviews = Reviews_1 = __decorate([
+        typeorm_1.Entity()
+    ], Reviews);
+    return Reviews;
+    var Reviews_1;
+}());
 exports.Reviews = Reviews;
-var Reviews_1;
 //# sourceMappingURL=Reviews.js.map

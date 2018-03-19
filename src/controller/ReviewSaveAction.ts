@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {getManager, getRepository} from "typeorm";
+import {getRepository} from "typeorm";
 import {Reviews} from "../entity/Reviews";
 
 /**

@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const PlaceGetAllAction_1 = require("./controller/PlaceGetAllAction");
-const PlaceGetByIdAction_1 = require("./controller/PlaceGetByIdAction");
-const ReviewSaveAction_1 = require("./controller/ReviewSaveAction");
-const ReviewGetAllAction_1 = require("./controller/ReviewGetAllAction");
-const PlacePostAction_1 = require("./controller/PlacePostAction");
+var PlaceGetAllAction_1 = require("./controller/PlaceGetAllAction");
+var PlaceGetByIdAction_1 = require("./controller/PlaceGetByIdAction");
+var ReviewSaveAction_1 = require("./controller/ReviewSaveAction");
+var ReviewGetAllAction_1 = require("./controller/ReviewGetAllAction");
+var PlacePostAction_1 = require("./controller/PlacePostAction");
 /**
  * All application routes.
  */
