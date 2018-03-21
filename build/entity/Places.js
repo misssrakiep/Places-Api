@@ -21,8 +21,12 @@ var Place = /** @class */ (function () {
     ], Place.prototype, "id", void 0);
     __decorate([
         typeorm_1.Column(),
-        __metadata("design:type", Number)
-    ], Place.prototype, "latlng", void 0);
+        __metadata("design:type", String)
+    ], Place.prototype, "lat", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Place.prototype, "lng", void 0);
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", String)

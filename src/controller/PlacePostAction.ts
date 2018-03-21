@@ -19,7 +19,8 @@ export async function placePostAction(request: Request, response: Response) {
     newPlace.placeName = data.placeName;
     newPlace.type = data.type;
     newPlace.website = data.website;
-    newPlace.latlng = data.latlng;
+    newPlace.lat = data.latlng;
+    newPlace.lng = data.latlng;    
     newPlace.review = data.review;
 
     // save received post
