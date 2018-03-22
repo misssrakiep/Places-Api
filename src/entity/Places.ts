@@ -18,6 +18,9 @@ export class Place {
     placeName: string;
 
     @Column()
+    address: string;
+
+    @Column()
     type?: string;
 
     @Column()
