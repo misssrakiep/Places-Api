@@ -53,8 +53,8 @@ function placePostAction(request, response) {
                     newPlace.placeName = data.placeName;
                     newPlace.type = data.type;
                     newPlace.website = data.website;
-                    newPlace.lat = data.latlng;
-                    newPlace.lng = data.latlng;
+                    newPlace.lat = data.lat;
+                    newPlace.lng = data.lng;
                     newPlace.review = data.review;
                     // save received post
                     return [4 /*yield*/, myPlaceRepository.save(newPlace)];
