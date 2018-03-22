@@ -51,11 +51,14 @@ function placePostAction(request, response) {
                     console.log("data", data);
                     newPlace = new Places_1.Place();
                     newPlace.placeName = data.placeName;
+                    newPlace.place_id = data.place_id;
+                    newPlace.address = data.address;
                     newPlace.type = data.type;
                     newPlace.website = data.website;
                     newPlace.lat = data.lat;
                     newPlace.lng = data.lng;
                     newPlace.review = data.review;
+                    console.log("newPlace", newPlace);
                     // save received post
                     return [4 /*yield*/, myPlaceRepository.save(newPlace)];
                 case 1:

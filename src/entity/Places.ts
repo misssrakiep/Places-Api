@@ -8,10 +8,10 @@ export class Place {
     @PrimaryGeneratedColumn()
     id: number;
     
-    @Column()
+    @Column("decimal", { precision: 10, scale: 5 })
     lat: number;
 
-    @Column()
+    @Column("decimal", { precision: 10, scale: 5 })
     lng: number;
 
     @Column()
@@ -19,6 +19,9 @@ export class Place {
 
     @Column()
     address: string;
+
+    @Column()
+    place_id: string;
 
     @Column()
     type?: string;

@@ -20,11 +20,11 @@ var Place = /** @class */ (function () {
         __metadata("design:type", Number)
     ], Place.prototype, "id", void 0);
     __decorate([
-        typeorm_1.Column(),
+        typeorm_1.Column("decimal", { precision: 10, scale: 5 }),
         __metadata("design:type", Number)
     ], Place.prototype, "lat", void 0);
     __decorate([
-        typeorm_1.Column(),
+        typeorm_1.Column("decimal", { precision: 10, scale: 5 }),
         __metadata("design:type", Number)
     ], Place.prototype, "lng", void 0);
     __decorate([
@@ -35,6 +35,10 @@ var Place = /** @class */ (function () {
         typeorm_1.Column(),
         __metadata("design:type", String)
     ], Place.prototype, "address", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Place.prototype, "place_id", void 0);
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", String)

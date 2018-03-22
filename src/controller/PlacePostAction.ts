@@ -17,12 +17,15 @@ export async function placePostAction(request: Request, response: Response) {
     const newPlace = new Place();
 
     newPlace.placeName = data.placeName;
+    newPlace.place_id = data.place_id;
+    newPlace.address = data.address;
     newPlace.type = data.type;
     newPlace.website = data.website;
     newPlace.lat = data.lat;
     newPlace.lng = data.lng;    
     newPlace.review = data.review;
 
+    console.log("newPlace", newPlace);
     // save received post
     await myPlaceRepository.save(newPlace);
 
