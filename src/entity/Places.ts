@@ -9,10 +9,10 @@ export class Place {
     id: number;
     
     @Column()
-    lat: string;
+    lat: number;
 
     @Column()
-    lng: string;
+    lng: number;
 
     @Column()
     placeName: string;
