@@ -60,6 +60,7 @@ function reviewSaveAction(request, response) {
                     newReview.review = data.review;
                     newReview.pictures = data.pictures;
                     newReview.place = place;
+                    newReview.place_id = request.params.id;
                     // save received post
                     return [4 /*yield*/, reviewsRepository.save(newReview)];
                 case 2:

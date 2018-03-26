@@ -36,6 +36,10 @@ var Reviews = /** @class */ (function () {
         __metadata("design:type", String)
     ], Reviews.prototype, "pictures", void 0);
     __decorate([
+        typeorm_1.Column({ unique: true }),
+        __metadata("design:type", String)
+    ], Reviews.prototype, "place_id", void 0);
+    __decorate([
         typeorm_1.ManyToOne(function (type) { return Reviews_1; }, function (reviews) { return reviews.place; }),
         __metadata("design:type", Places_1.Place)
     ], Reviews.prototype, "place", void 0);
