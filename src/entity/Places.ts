@@ -20,7 +20,7 @@ export class Place {
     @Column()
     address: string;
 
-    @Column()
+    @Column({unique: true})
     place_id: string;
 
     @Column()
