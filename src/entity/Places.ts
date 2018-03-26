@@ -29,7 +29,7 @@ export class Place {
     @Column()
     website?: string;
     
-    @OneToMany(type => Place, place => place.review)
-    review?: Reviews;
+    @OneToMany(type => Reviews, review => review.place)
+    review?: Reviews[];
 
 }

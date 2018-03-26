@@ -21,9 +21,6 @@ export class Reviews {
     @Column()
     pictures?: string;
 
-    @Column()
-    placeId: string;
-
-    @ManyToOne(type => Reviews, reviews => reviews.place)
+    @ManyToOne(type => Place, place => place.id)
     place?: Place
 }

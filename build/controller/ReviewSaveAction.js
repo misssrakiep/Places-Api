@@ -54,7 +54,7 @@ function reviewSaveAction(request, response) {
                     return [4 /*yield*/, placeRepository.findOneById(request.params.id)];
                 case 1:
                     place = _a.sent();
-                    console.log("PLACE ID PARAM", request.params.id);
+                    console.log("PLACE ID PARAM", place);
                     newReview.user_name = data.user_name;
                     newReview.rating = data.rating;
                     newReview.review = data.review;

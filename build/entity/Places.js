@@ -14,7 +14,6 @@ var Reviews_1 = require("./Reviews");
 var Place = /** @class */ (function () {
     function Place() {
     }
-    Place_1 = Place;
     __decorate([
         typeorm_1.PrimaryGeneratedColumn(),
         __metadata("design:type", Number)
@@ -48,14 +47,13 @@ var Place = /** @class */ (function () {
         __metadata("design:type", String)
     ], Place.prototype, "website", void 0);
     __decorate([
-        typeorm_1.OneToMany(function (type) { return Place_1; }, function (place) { return place.review; }),
-        __metadata("design:type", Reviews_1.Reviews)
+        typeorm_1.OneToMany(function (type) { return Reviews_1.Reviews; }, function (review) { return review.place; }),
+        __metadata("design:type", Array)
     ], Place.prototype, "review", void 0);
-    Place = Place_1 = __decorate([
+    Place = __decorate([
         typeorm_1.Entity()
     ], Place);
     return Place;
-    var Place_1;
 }());
 exports.Place = Place;
 //# sourceMappingURL=Places.js.map

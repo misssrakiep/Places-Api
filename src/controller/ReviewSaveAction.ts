@@ -26,7 +26,6 @@ export async function reviewSaveAction(request: Request, response: Response) {
     newReview.review = data.review;
     newReview.pictures = data.pictures;
     newReview.place = place;
-    newReview.placeId = request.params.id;
     
     // save received post
     await reviewsRepository.save(newReview);

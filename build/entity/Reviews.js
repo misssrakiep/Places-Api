@@ -14,7 +14,6 @@ var Places_1 = require("./Places");
 var Reviews = /** @class */ (function () {
     function Reviews() {
     }
-    Reviews_1 = Reviews;
     __decorate([
         typeorm_1.PrimaryGeneratedColumn(),
         __metadata("design:type", Number)
@@ -36,14 +35,13 @@ var Reviews = /** @class */ (function () {
         __metadata("design:type", String)
     ], Reviews.prototype, "pictures", void 0);
     __decorate([
-        typeorm_1.ManyToOne(function (type) { return Reviews_1; }, function (reviews) { return reviews.place; }),
+        typeorm_1.ManyToOne(function (type) { return Places_1.Place; }, function (place) { return place.id; }),
         __metadata("design:type", Places_1.Place)
     ], Reviews.prototype, "place", void 0);
-    Reviews = Reviews_1 = __decorate([
+    Reviews = __decorate([
         typeorm_1.Entity()
     ], Reviews);
     return Reviews;
-    var Reviews_1;
 }());
 exports.Reviews = Reviews;
 //# sourceMappingURL=Reviews.js.map
