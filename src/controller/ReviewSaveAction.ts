@@ -19,13 +19,14 @@ export async function reviewSaveAction(request: Request, response: Response) {
     const newReview = new Reviews();
     const place = await placeRepository.findOneById(request.params.id);
 
-    console.log("PLACE ID PARAM", request.params.id);
+    console.log("PLACE ID PARAM", place);
     
     newReview.user_name = data.user_name;
     newReview.rating = data.rating;
     newReview.review = data.review;
     newReview.pictures = data.pictures;
     newReview.place = place;
+    newReview.placeId = request.params.id;
     
     // save received post
     await reviewsRepository.save(newReview);
