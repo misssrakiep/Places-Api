@@ -36,7 +36,7 @@ var Place = /** @class */ (function () {
         __metadata("design:type", String)
     ], Place.prototype, "address", void 0);
     __decorate([
-        typeorm_1.Column({ unique: true }),
+        typeorm_1.Column(),
         __metadata("design:type", String)
     ], Place.prototype, "place_id", void 0);
     __decorate([
